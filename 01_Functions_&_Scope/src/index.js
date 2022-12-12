@@ -73,7 +73,18 @@ const inventory = [
 */
 
 // Start here!
+function helloWorld() {
+  return "Hello, world!"
+}
 
+helloWorld()
+
+function formatprice(priceNum){
+  return '$' + Number.parseFloat(priceNum).toFixed(2);
+  // return $$(Number.parseFloat(priceNum).toFixed(2))
+}
+
+console.log('formatPrice', formatPrice(inventory[0].price))
 
 
 
@@ -81,6 +92,9 @@ const inventory = [
 
 // ✅ create an arrow function version of the formatPrice function
 
+const formatPrice(priceNum) {
+  return '$' + Number.parseFloat(priceNum).toFixed(2);
+}
 
 
 // ✅ create a blurb() function that accepts a book as an argument and logs a message in the following format:
@@ -106,14 +120,24 @@ const inventory = [
 
 // 💡 Practice using callbacks for iteration
 
+const nums = [1, 2, 3]
+nums.forEach(num => console.log(num*num))
 
 
 // ✅ Create an array of the prices of all of the books
 
+let prices = [];
+inventory.forEach(book => console.log(formatPrice(book.price)))
 
+console.log('prices', prices);
 
 // ✅ Create an array of simplified book objects
 
+const array1 = [1, 4, 9, 16];
+const map1 = array1.map(x => x * 2);
+console.log(map1);
+console.log(array1);
+console.log(map1 == array1)
 
 
 // ✅ Create an array of strings from the inventory in the following format:
